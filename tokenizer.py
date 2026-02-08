@@ -10,7 +10,6 @@ import os
 from multiprocessing import Pool,cpu_count
 import regex as re
 from cs336_basics.pretokenization_example import find_chunk_boundaries
-import time
 import json
 from collections import Counter,defaultdict
 import heapq
@@ -32,7 +31,6 @@ def process_single_chunk(file_path, start, end, special_tokens: List[str]):
             for chunk in chunks:
                 if not chunk:
                     continue
-
                 tokens = re.findall(PAT, chunk)
                 for t in tokens:
                     words_to_count[t] += 1
@@ -63,7 +61,6 @@ def pre_token(file_path:str, num_chunks:int , special_tokens: List[str]):
     with open(file_path, "rb") as f:
         chunks = find_chunk_boundaries(f, num_chunks, special_tokens)
         assert len(chunks), f"chunk length: {len(chunks)} is less than 1"
-    # print(f"Len chunks: {len(chunks)}")
     params = [(file_path,start,end,special_tokens) for (start,end) in zip(chunks[:-1], chunks[1:])]
     chunk_results = []
     with Pool(len(chunks) - 1) as pool:
@@ -89,7 +86,6 @@ class ReverseSortPair:
     def __init__(self, pair):
         self.pair = pair
     def __lt__(self, other):
-        # 频率相同时，字典序大的返回 True (即它更"小"，会排在堆顶)
         return self.pair > other.pair
     
 def train_bpe(input_path: str | os.PathLike, vocab_size: int, special_tokens: List[str]) -> Tuple[Dict[int, bytes], List[Tuple[bytes, bytes]]]:
@@ -100,7 +96,6 @@ def train_bpe(input_path: str | os.PathLike, vocab_size: int, special_tokens: Li
     p2w = pre_token_result_dict["pair_to_words"]
     p2c = pre_token_result_dict["pair_to_count"]
     
-    # 先放special token（从ID 0开始），然后是256个字节
     vocab = {}
     for i, special_token in enumerate(special_tokens):
         vocab[i] = special_token.encode("utf-8")
@@ -110,9 +105,7 @@ def train_bpe(input_path: str | os.PathLike, vocab_size: int, special_tokens: Li
     heap = [(-count, ReverseSortPair(pair)) for pair, count in p2c.items() if count > 0]
     heapq.heapify(heap)
     merges = []
-    m = 0
     while cur_vocab_size < vocab_size:
-        m += 1
         if not heap:
             break
         
@@ -126,46 +119,35 @@ def train_bpe(input_path: str | os.PathLike, vocab_size: int, special_tokens: Li
         new_token = best_pair[0] + best_pair[1]
         vocab[cur_vocab_size] = new_token
         cur_vocab_size += 1
+        pair_count_changes = defaultdict(int)
         for word in words_to_update:
             new_tokens = []
             old_tokens = w2t[word]
             i = 0
+            word_count = w2c[word]
             while i < len(old_tokens):
                 if i < len(old_tokens) -1 and (old_tokens[i], old_tokens[i + 1]) == best_pair:
                     new_tokens.append(new_token)
-                    if i > 0:
-                        # (old_token[i-1], old_token[i]) 这对pair 的count减去一个word count
-                        # p2w里面移除掉(old_token[i-1], old_token[i])对应的word
-                        # 生成新pair: (old_token[i], new_token)
-                        old_near_pair = (old_tokens[i - 1], old_tokens[i])
-                        p2c[old_near_pair] -= w2c[word]
-                        new_near_pair = (old_tokens[i -1], new_token)
-                        p2w[new_near_pair].add(word)
-                        if word in p2w[old_near_pair]:
-                            p2w[old_near_pair].remove(word)
-                        p2c[new_near_pair] += w2c[word]
-                        heapq.heappush(heap,(-p2c[new_near_pair], ReverseSortPair(new_near_pair)))
-                        if p2c[old_near_pair] > 0: 
-                            heapq.heappush(heap, (-p2c[old_near_pair], ReverseSortPair(old_near_pair)))
-                    if i < len(old_tokens) - 2:
-                        if (old_tokens[i + 1], old_tokens[i + 2]) != best_pair:
-                            old_near_pair = (old_tokens[i + 1], old_tokens[i + 2])
-                            p2c[old_near_pair] -= w2c[word]
-                            new_near_pair = (new_token, old_tokens[i + 2])
-                            p2w[new_near_pair].add(word)
-                            if word in p2w[old_near_pair]:
-                                p2w[old_near_pair].remove(word)
-                            p2c[new_near_pair] += w2c[word]
-                            heapq.heappush(heap,(-p2c[new_near_pair], ReverseSortPair(new_near_pair)))
-                            if p2c[old_near_pair] > 0: 
-                                heapq.heappush(heap, (-p2c[old_near_pair], ReverseSortPair(old_near_pair)))
                     i += 2
                 else:
                     new_tokens.append(old_tokens[i])
                     i += 1
+            for i in range(len(old_tokens) - 1):
+                old_pair = (old_tokens[i], old_tokens[i + 1])
+                pair_count_changes[old_pair] -= word_count
+            for i in range(len(new_tokens) - 1):
+                new_pair = (new_tokens[i], new_tokens[i + 1])
+                pair_count_changes[new_pair] += word_count
+                p2w[new_pair].add(word)
             w2t[word] = new_tokens
+        for pair,change in pair_count_changes.items():
+            if change == 0:
+                continue
+            p2c[pair] += change
+            if p2c[pair] > 0:
+                heapq.heappush(heap, (-p2c[pair], ReverseSortPair(pair)))
+        del p2c[best_pair]
         del p2w[best_pair]
-        p2c[best_pair] = 0
     
     return vocab, merges
     
