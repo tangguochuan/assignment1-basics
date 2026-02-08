@@ -1,0 +1,1315 @@
+================================================================================
+Vocab 对比报告
+================================================================================
+
+【统计信息】
+官方 vocab 总数: 500
+用户 vocab 总数: 500
+共同 token 数: 384
+仅在用户 vocab 中的 token 数: 116
+仅在官方 vocab 中的 token 数: 116
+序号不同的 token 数: 375
+
+================================================================================
+【1. 用户有但官方没有的 token】（按用户序号排序）
+================================================================================
+  序号  280: 'me' (bytes: b'me')
+  序号  286: 'io' (bytes: b'io')
+  序号  287: 'ro' (bytes: b  序号  273: 'ha' (bytes: b'ha')
+'ro')
+  序号  290: 'ho' (bytes: b'ho')
+  序号  292: 'ma' (bytes: b'ma')
+  序号  293: 'Ġco' (bytes: b'\xc4\xa0co')
+  序号  294: 'la' (bytes: b'la')
+  序号  295: 'ra' (bytes: b'ra')
+  序号  296: 'us' (bytes: b'us')
+  序号  299: 'rs' (bytes: b'rs')
+  序号  303: 'Ġyo' (bytes: b'\xc4\xa0yo')
+  序号  305: 'Ġfo' (bytes: b'\xc4\xa0fo')
+  序号  306: 'tion' (bytes: b'tion')
+  序号  311: 'his' (bytes: b'his')
+  序号  312: 'rd' (bytes: b'rd')
+  序号  313: 'hat' (bytes: b'hat')
+  序号  320: 'ie' (bytes: b'ie')
+  序号  322: 'Ġma' (bytes: b'\xc4\xa0ma')
+  序号  323: 'Ġca' (bytes: b'\xc4\xa0ca')
+  序号  325: 'Ġno' (bytes: b'\xc4\xa0no')
+  序号  327: 'men' (bytes: b'men')
+  序号  329: 'mp' (bytes: b'mp')
+  序号  334: 'ry' (bytes: b'ry')
+  序号  335: 'mo' (bytes: b'mo')
+  序号  340: 'Ġwit' (bytes: b'\xc4\xa0wit')
+  序号  347: 'rc' (bytes: b'rc')
+  序号  348: 'ia' (bytes: b'ia')
+  序号  354: 'up' (bytes: b'up')
+  序号  355: 'quo' (bytes: b'quo')
+  序号  360: 'Ġpro' (bytes: b'\xc4\xa0pro')
+  序号  362: 'Ġso' (bytes: b'\xc4\xa0so')
+  序号  363: 'Ġla' (bytes: b'\xc4\xa0la')
+  序号  365: 'Ġwa' (bytes: b'\xc4\xa0wa')
+  序号  369: 'ls' (bytes: b'ls')
+  序号  372: 'Ġsha' (bytes: b'\xc4\xa0sha')
+  序号  373: 'va' (bytes: b'va')
+  序号  374: 'ice' (bytes: b'ice')
+  序号  375: 'Ġfro' (bytes: b'\xc4\xa0fro')
+  序号  377: 'ite' (bytes: b'ite')
+  序号  378: 'Ġdo' (bytes: b'\xc4\xa0do')
+  序号  381: 'Ġpa' (bytes: b'\xc4\xa0pa')
+  序号  386: 'Ġlo' (bytes: b'\xc4\xa0lo')
+  序号  390: 'Ġmo' (bytes: b'\xc4\xa0mo')
+  序号  392: 'hic' (bytes: b'hic')
+  序号  394: 'ht' (bytes: b'ht')
+  序号  395: 'Ġho' (bytes: b'\xc4\xa0ho')
+  序号  398: 'Ġshal' (bytes: b'\xc4\xa0shal')
+  序号  401: 'ine' (bytes: b'ine')
+  序号  404: 'hich' (bytes: b'hich')
+  序号  405: 'uc' (bytes: b'uc')
+  序号  408: 'ms' (bytes: b'ms')
+  序号  409: 'Ġsa' (bytes: b'\xc4\xa0sa')
+  序号  412: 'have' (bytes: b'have')
+  序号  415: 'Ġeve' (bytes: b'\xc4\xa0eve')
+  序号  416: 'Ġda' (bytes: b'\xc4\xa0da')
+  序号  418: 'ran' (bytes: b'ran')
+  序号  421: 'Ġuse' (bytes: b'\xc4\xa0use')
+  序号  423: 'ĠAn' (bytes: b'\xc4\xa0An')
+  序号  425: 'ile' (bytes: b'ile')
+  序号  426: 'Ġen' (bytes: b'\xc4\xa0en')
+  序号  427: 'Ġle' (bytes: b'\xc4\xa0le')
+  序号  428: 'has' (bytes: b'has')
+  序号  429: 'Ġfa' (bytes: b'\xc4\xa0fa')
+  序号  431: 'wn' (bytes: b'wn')
+  序号  437: 'Ġ..' (bytes: b'\xc4\xa0..')
+  序号  439: 'tions' (bytes: b'tions')
+  序号  441: 'uld' (bytes: b'uld')
+  序号  443: 'ug' (bytes: b'ug')
+  序号  444: 'hing' (bytes: b'hing')
+  序号  446: 'Ġpu' (bytes: b'\xc4\xa0pu')
+  序号  448: 'my' (bytes: b'my')
+  序号  449: 'han' (bytes: b'han')
+  序号  451: 'Ġint' (bytes: b'\xc4\xa0int')
+  序号  454: 'Ġpo' (bytes: b'\xc4\xa0po')
+  序号  455: 'ide' (bytes: b'ide')
+  序号  456: 'ding' (bytes: b'ding')
+  序号  460: 'lle' (bytes: b'lle')
+  序号  461: 'ting' (bytes: b'ting')
+  序号  462: 'ring' (bytes: b'ring')
+  序号  463: 'merc' (bytes: b'merc')
+  序号  464: 'Ġgo' (bytes: b'\xc4\xa0go')
+  序号  466: 'Ġve' (bytes: b'\xc4\xa0ve')
+  序号  467: 'ĠGo' (bytes: b'\xc4\xa0Go')
+  序号  468: 'ute' (bytes: b'ute')
+  序号  469: 'ime' (bytes: b'ime')
+  序号  470: 'Ġres' (bytes: b'\xc4\xa0res')
+  序号  471: 'ments' (bytes: b'ments')
+  序号  472: 'Ġtho' (bytes: b'\xc4\xa0tho')
+  序号  473: 'Ġ200' (bytes: b'\xc4\xa0200')
+  序号  474: 'Ġhis' (bytes: b'\xc4\xa0his')
+  序号  475: 'ure' (bytes: b'ure')
+  序号  476: 'rma' (bytes: b'rma')
+  序号  477: 'Ġj' (bytes: b'\xc4\xa0j')
+  序号  478: 'ites' (bytes: b'ites')
+  序号  479: 'Ġthei' (bytes: b'\xc4\xa0thei')
+  序号  480: 'Ġtheir' (bytes: b'\xc4\xa0their')
+  序号  481: 'Ġte' (bytes: b'\xc4\xa0te')
+  序号  482: 'Ġhas' (bytes: b'\xc4\xa0has')
+  序号  483: 'les' (bytes: b'les')
+  序号  484: 'Ġba' (bytes: b'\xc4\xa0ba')
+  序号  485: 'Ġacc' (bytes: b'\xc4\xa0acc')
+  序号  486: 'ĠGod' (bytes: b'\xc4\xa0God')
+  序号  487: 'ĠCa' (bytes: b'\xc4\xa0Ca')
+  序号  488: 'Ġwas' (bytes: b'\xc4\xa0was')
+  序号  489: 'Ġone' (bytes: b'\xc4\xa0one')
+  序号  490: 'ĠR' (bytes: b'\xc4\xa0R')
+  序号  491: 'Ġ-' (bytes: b'\xc4\xa0-')
+  序号  492: 'Ġea' (bytes: b'\xc4\xa0ea')
+  序号  493: 'Ġcont' (bytes: b'\xc4\xa0cont')
+  序号  494: 'ĠCo' (bytes: b'\xc4\xa0Co')
+  序号  495: 'ĠN' (bytes: b'\xc4\xa0N')
+  序号  496: 'Ġsho' (bytes: b'\xc4\xa0sho')
+  序号  497: 'Ġeven' (bytes: b'\xc4\xa0even')
+  序号  498: 'Ġpla' (bytes: b'\xc4\xa0pla')
+  序号  499: 'Ġge' (bytes: b'\xc4\xa0ge')
+
+================================================================================
+【2. 官方有但用户没有的 token】（按官方序号排序）
+================================================================================
+  序号  265: 'er' (bytes: b'er')
+  序号  267: 'at' (bytes: b'at')
+  序号  269: 'nd' (bytes: b'nd')
+  序号  271: 'or' (bytes: b'or')
+  序号  274: 'on' (bytes: b'on')
+  序号  277: 'ou' (bytes: b'ou')
+  序号  279: 'en' (bytes: b'en')
+  序号  280: 'es' (bytes: b'es')
+  序号  285: 'ed' (bytes: b'ed')
+  序号  286: 'al' (bytes: b'al')
+  序号  287: 'Ġm' (bytes: b'\xc4\xa0m')
+  序号  290: 'an' (bytes: b'an')
+  序号  291: 'ar' (bytes: b'ar')
+  序号  293: 'om' (bytes: b'om')
+  序号  294: 'Ġth' (bytes: b'\xc4\xa0th')
+  序号  297: 'Ġh' (bytes: b'\xc4\xa0h')
+  序号  298: 'Ġl' (bytes: b'\xc4\xa0l')
+  序号  301: 'as' (bytes: b'as')
+  序号  302: 'ot' (bytes: b'ot')
+  序号  303: 'il' (bytes: b'il')
+  序号  305: 'Ġu' (bytes: b'\xc4\xa0u')
+  序号  306: 'ent' (bytes: b'ent')
+  序号  311: 'os' (bytes: b'os')
+  序号  313: 'et' (bytes: b'et')
+  序号  316: 'el' (bytes: b'el')
+  序号  318: 'ay' (bytes: b'ay')
+  序号  319: 'st' (bytes: b'st')
+  序号  320: 'ow' (bytes: b'ow')
+  序号  322: 'ce' (bytes: b'ce')
+  序号  323: 'ad' (bytes: b'ad')
+  序号  326: 'ver' (bytes: b'ver')
+  序号  329: 'ur' (bytes: b'ur')
+  序号  330: 'ol' (bytes: b'ol')
+  序号  331: 'ct' (bytes: b'ct')
+  序号  334: 'im' (bytes: b'im')
+  序号  335: 'all' (bytes: b'all')
+  序号  336: 'am' (bytes: b'am')
+  序号  338: 'ch' (bytes: b'ch')
+  序号  341: 'ith' (bytes: b'ith')
+  序号  342: 'ir' (bytes: b'ir')
+  序号  345: 'Ġpr' (bytes: b'\xc4\xa0pr')
+  序号  346: 'ap' (bytes: b'ap')
+  序号  347: 'Ġsh' (bytes: b'\xc4\xa0sh')
+  序号  349: 'th' (bytes: b'th')
+  序号  352: 'Ġwh' (bytes: b'\xc4\xa0wh')
+  序号  356: 'nt' (bytes: b'nt')
+  序号  359: 'Ġal' (bytes: b'\xc4\xa0al')
+  序号  360: 'op' (bytes: b'op')
+  序号  364: 'the' (bytes: b'the')
+  序号  365: 'and' (bytes: b'and')
+  序号  368: 'od' (bytes: b'od')
+  序号  374: 'Ġor' (bytes: b'\xc4\xa0or')
+  序号  375: 'ore' (bytes: b'ore')
+  序号  377: 'Ġfr' (bytes: b'\xc4\xa0fr')
+  序号  378: 'ill' (bytes: b'ill')
+  序号  379: 'res' (bytes: b'res')
+  序号  381: 'ess' (bytes: b'ess')
+  序号  385: 'art' (bytes: b'art')
+  序号  390: 'ul' (bytes: b'ul')
+  序号  393: 'est' (bytes: b'est')
+  序号  394: 'se' (bytes: b'se')
+  序号  395: 'apos' (bytes: b'apos')
+  序号  396: 'ag' (bytes: b'ag')
+  序号  402: 'ter' (bytes: b'ter')
+  序号  404: 'em' (bytes: b'em')
+  序号  405: 'ave' (bytes: b'ave')
+  序号  410: 'oc' (bytes: b'oc')
+  序号  415: 'Ġv' (bytes: b'\xc4\xa0v')
+  序号  416: 'igh' (bytes: b'igh')
+  序号  417: 'ich' (bytes: b'ich')
+  序号  418: 'Ġall' (bytes: b'\xc4\xa0all')
+  序号  419: 'ri' (bytes: b'ri')
+  序号  421: 'Ġr' (bytes: b'\xc4\xa0r')
+  序号  426: 'un' (bytes: b'un')
+  序号  431: 'Ġwor' (bytes: b'\xc4\xa0wor')
+  序号  432: 'Ġsu' (bytes: b'\xc4\xa0su')
+  序号  436: 'ate' (bytes: b'ate')
+  序号  438: 'Ġch' (bytes: b'\xc4\xa0ch')
+  序号  439: 'ect' (bytes: b'ect')
+  序号  442: 'ress' (bytes: b'ress')
+  序号  444: 'Ġwill' (bytes: b'\xc4\xa0will')
+  序号  446: 'ort' (bytes: b'ort')
+  序号  447: 'ant' (bytes: b'ant')
+  序号  450: 'are' (bytes: b'are')
+  序号  451: '..' (bytes: b'..')
+  序号  455: 'ast' (bytes: b'ast')
+  序号  456: '24' (bytes: b'24')
+  序号  458: 'ould' (bytes: b'ould')
+  序号  459: 'ven' (bytes: b'ven')
+  序号  460: 'Ġtr' (bytes: b'\xc4\xa0tr')
+  序号  462: 'um' (bytes: b'um')
+  序号  463: 'out' (bytes: b'out')
+  序号  464: 'com' (bytes: b'com')
+  序号  465: 'Ġunt' (bytes: b'\xc4\xa0unt')
+  序号  467: 'ft' (bytes: b'ft')
+  序号  469: 'ost' (bytes: b'ost')
+  序号  470: 'og' (bytes: b'og')
+  序号  471: 'ish' (bytes: b'ish')
+  序号  472: 'ions' (bytes: b'ions')
+  序号  474: '124' (bytes: b'124')
+  序号  475: 'Ġunto' (bytes: b'\xc4\xa0unto')
+  序号  476: 'mer' (bytes: b'mer')
+  序号  477: 'ings' (bytes: b'ings')
+  序号  480: 'ated' (bytes: b'ated')
+  序号  481: 'ac' (bytes: b'ac')
+  序号  482: 'lu' (bytes: b'lu')
+  序号  483: 'ere' (bytes: b'ere')
+  序号  485: 'for' (bytes: b'for')
+  序号  489: 'age' (bytes: b'age')
+  序号  490: 'rou' (bytes: b'rou')
+  序号  492: 'ans' (bytes: b'ans')
+  序号  493: 'pp' (bytes: b'pp')
+  序号  495: 'Ġwork' (bytes: b'\xc4\xa0work')
+  序号  497: 'fore' (bytes: b'fore')
+  序号  498: 'Ġsit' (bytes: b'\xc4\xa0sit')
+  序号  499: 'Ġver' (bytes: b'\xc4\xa0ver')
+
+================================================================================
+【3. 两者都有但序号不同的 token】（按官方序号排序）
+================================================================================
+  Token: '!' (bytes: b'!')
+    官方序号: 1, 用户序号: 34
+  Token: '"' (bytes: b'"')
+    官方序号: 2, 用户序号: 35
+  Token: '#' (bytes: b'#')
+    官方序号: 3, 用户序号: 36
+  Token: '$' (bytes: b'$')
+    官方序号: 4, 用户序号: 37
+  Token: '%' (bytes: b'%')
+    官方序号: 5, 用户序号: 38
+  Token: '&' (bytes: b'&')
+    官方序号: 6, 用户序号: 39
+  Token: ''' (bytes: b"'")
+    官方序号: 7, 用户序号: 40
+  Token: '(' (bytes: b'(')
+    官方序号: 8, 用户序号: 41
+  Token: ')' (bytes: b')')
+    官方序号: 9, 用户序号: 42
+  Token: '*' (bytes: b'*')
+    官方序号: 10, 用户序号: 43
+  Token: '+' (bytes: b'+')
+    官方序号: 11, 用户序号: 44
+  Token: ',' (bytes: b',')
+    官方序号: 12, 用户序号: 45
+  Token: '-' (bytes: b'-')
+    官方序号: 13, 用户序号: 46
+  Token: '.' (bytes: b'.')
+    官方序号: 14, 用户序号: 47
+  Token: '/' (bytes: b'/')
+    官方序号: 15, 用户序号: 48
+  Token: '0' (bytes: b'0')
+    官方序号: 16, 用户序号: 49
+  Token: '1' (bytes: b'1')
+    官方序号: 17, 用户序号: 50
+  Token: '2' (bytes: b'2')
+    官方序号: 18, 用户序号: 51
+  Token: '3' (bytes: b'3')
+    官方序号: 19, 用户序号: 52
+  Token: '4' (bytes: b'4')
+    官方序号: 20, 用户序号: 53
+  Token: '5' (bytes: b'5')
+    官方序号: 21, 用户序号: 54
+  Token: '6' (bytes: b'6')
+    官方序号: 22, 用户序号: 55
+  Token: '7' (bytes: b'7')
+    官方序号: 23, 用户序号: 56
+  Token: '8' (bytes: b'8')
+    官方序号: 24, 用户序号: 57
+  Token: '9' (bytes: b'9')
+    官方序号: 25, 用户序号: 58
+  Token: ':' (bytes: b':')
+    官方序号: 26, 用户序号: 59
+  Token: ';' (bytes: b';')
+    官方序号: 27, 用户序号: 60
+  Token: '<' (bytes: b'<')
+    官方序号: 28, 用户序号: 61
+  Token: '=' (bytes: b'=')
+    官方序号: 29, 用户序号: 62
+  Token: '>' (bytes: b'>')
+    官方序号: 30, 用户序号: 63
+  Token: '?' (bytes: b'?')
+    官方序号: 31, 用户序号: 64
+  Token: '@' (bytes: b'@')
+    官方序号: 32, 用户序号: 65
+  Token: 'A' (bytes: b'A')
+    官方序号: 33, 用户序号: 66
+  Token: 'B' (bytes: b'B')
+    官方序号: 34, 用户序号: 67
+  Token: 'C' (bytes: b'C')
+    官方序号: 35, 用户序号: 68
+  Token: 'D' (bytes: b'D')
+    官方序号: 36, 用户序号: 69
+  Token: 'E' (bytes: b'E')
+    官方序号: 37, 用户序号: 70
+  Token: 'F' (bytes: b'F')
+    官方序号: 38, 用户序号: 71
+  Token: 'G' (bytes: b'G')
+    官方序号: 39, 用户序号: 72
+  Token: 'H' (bytes: b'H')
+    官方序号: 40, 用户序号: 73
+  Token: 'I' (bytes: b'I')
+    官方序号: 41, 用户序号: 74
+  Token: 'J' (bytes: b'J')
+    官方序号: 42, 用户序号: 75
+  Token: 'K' (bytes: b'K')
+    官方序号: 43, 用户序号: 76
+  Token: 'L' (bytes: b'L')
+    官方序号: 44, 用户序号: 77
+  Token: 'M' (bytes: b'M')
+    官方序号: 45, 用户序号: 78
+  Token: 'N' (bytes: b'N')
+    官方序号: 46, 用户序号: 79
+  Token: 'O' (bytes: b'O')
+    官方序号: 47, 用户序号: 80
+  Token: 'P' (bytes: b'P')
+    官方序号: 48, 用户序号: 81
+  Token: 'Q' (bytes: b'Q')
+    官方序号: 49, 用户序号: 82
+  Token: 'R' (bytes: b'R')
+    官方序号: 50, 用户序号: 83
+  Token: 'S' (bytes: b'S')
+    官方序号: 51, 用户序号: 84
+  Token: 'T' (bytes: b'T')
+    官方序号: 52, 用户序号: 85
+  Token: 'U' (bytes: b'U')
+    官方序号: 53, 用户序号: 86
+  Token: 'V' (bytes: b'V')
+    官方序号: 54, 用户序号: 87
+  Token: 'W' (bytes: b'W')
+    官方序号: 55, 用户序号: 88
+  Token: 'X' (bytes: b'X')
+    官方序号: 56, 用户序号: 89
+  Token: 'Y' (bytes: b'Y')
+    官方序号: 57, 用户序号: 90
+  Token: 'Z' (bytes: b'Z')
+    官方序号: 58, 用户序号: 91
+  Token: '[' (bytes: b'[')
+    官方序号: 59, 用户序号: 92
+  Token: '\' (bytes: b'\\')
+    官方序号: 60, 用户序号: 93
+  Token: ']' (bytes: b']')
+    官方序号: 61, 用户序号: 94
+  Token: '^' (bytes: b'^')
+    官方序号: 62, 用户序号: 95
+  Token: '_' (bytes: b'_')
+    官方序号: 63, 用户序号: 96
+  Token: '`' (bytes: b'`')
+    官方序号: 64, 用户序号: 97
+  Token: 'a' (bytes: b'a')
+    官方序号: 65, 用户序号: 98
+  Token: 'b' (bytes: b'b')
+    官方序号: 66, 用户序号: 99
+  Token: 'c' (bytes: b'c')
+    官方序号: 67, 用户序号: 100
+  Token: 'd' (bytes: b'd')
+    官方序号: 68, 用户序号: 101
+  Token: 'e' (bytes: b'e')
+    官方序号: 69, 用户序号: 102
+  Token: 'f' (bytes: b'f')
+    官方序号: 70, 用户序号: 103
+  Token: 'g' (bytes: b'g')
+    官方序号: 71, 用户序号: 104
+  Token: 'h' (bytes: b'h')
+    官方序号: 72, 用户序号: 105
+  Token: 'i' (bytes: b'i')
+    官方序号: 73, 用户序号: 106
+  Token: 'j' (bytes: b'j')
+    官方序号: 74, 用户序号: 107
+  Token: 'k' (bytes: b'k')
+    官方序号: 75, 用户序号: 108
+  Token: 'l' (bytes: b'l')
+    官方序号: 76, 用户序号: 109
+  Token: 'm' (bytes: b'm')
+    官方序号: 77, 用户序号: 110
+  Token: 'n' (bytes: b'n')
+    官方序号: 78, 用户序号: 111
+  Token: 'o' (bytes: b'o')
+    官方序号: 79, 用户序号: 112
+  Token: 'p' (bytes: b'p')
+    官方序号: 80, 用户序号: 113
+  Token: 'q' (bytes: b'q')
+    官方序号: 81, 用户序号: 114
+  Token: 'r' (bytes: b'r')
+    官方序号: 82, 用户序号: 115
+  Token: 's' (bytes: b's')
+    官方序号: 83, 用户序号: 116
+  Token: 't' (bytes: b't')
+    官方序号: 84, 用户序号: 117
+  Token: 'u' (bytes: b'u')
+    官方序号: 85, 用户序号: 118
+  Token: 'v' (bytes: b'v')
+    官方序号: 86, 用户序号: 119
+  Token: 'w' (bytes: b'w')
+    官方序号: 87, 用户序号: 120
+  Token: 'x' (bytes: b'x')
+    官方序号: 88, 用户序号: 121
+  Token: 'y' (bytes: b'y')
+    官方序号: 89, 用户序号: 122
+  Token: 'z' (bytes: b'z')
+    官方序号: 90, 用户序号: 123
+  Token: '{' (bytes: b'{')
+    官方序号: 91, 用户序号: 124
+  Token: '|' (bytes: b'|')
+    官方序号: 92, 用户序号: 125
+  Token: '}' (bytes: b'}')
+    官方序号: 93, 用户序号: 126
+  Token: '~' (bytes: b'~')
+    官方序号: 94, 用户序号: 127
+  Token: '¡' (bytes: b'\xc2\xa1')
+    官方序号: 95, 用户序号: 162
+  Token: '¢' (bytes: b'\xc2\xa2')
+    官方序号: 96, 用户序号: 163
+  Token: '£' (bytes: b'\xc2\xa3')
+    官方序号: 97, 用户序号: 164
+  Token: '¤' (bytes: b'\xc2\xa4')
+    官方序号: 98, 用户序号: 165
+  Token: '¥' (bytes: b'\xc2\xa5')
+    官方序号: 99, 用户序号: 166
+  Token: '¦' (bytes: b'\xc2\xa6')
+    官方序号: 100, 用户序号: 167
+  Token: '§' (bytes: b'\xc2\xa7')
+    官方序号: 101, 用户序号: 168
+  Token: '¨' (bytes: b'\xc2\xa8')
+    官方序号: 102, 用户序号: 169
+  Token: '©' (bytes: b'\xc2\xa9')
+    官方序号: 103, 用户序号: 170
+  Token: 'ª' (bytes: b'\xc2\xaa')
+    官方序号: 104, 用户序号: 171
+  Token: '«' (bytes: b'\xc2\xab')
+    官方序号: 105, 用户序号: 172
+  Token: '¬' (bytes: b'\xc2\xac')
+    官方序号: 106, 用户序号: 173
+  Token: '®' (bytes: b'\xc2\xae')
+    官方序号: 107, 用户序号: 175
+  Token: '¯' (bytes: b'\xc2\xaf')
+    官方序号: 108, 用户序号: 176
+  Token: '°' (bytes: b'\xc2\xb0')
+    官方序号: 109, 用户序号: 177
+  Token: '±' (bytes: b'\xc2\xb1')
+    官方序号: 110, 用户序号: 178
+  Token: '²' (bytes: b'\xc2\xb2')
+    官方序号: 111, 用户序号: 179
+  Token: '³' (bytes: b'\xc2\xb3')
+    官方序号: 112, 用户序号: 180
+  Token: '´' (bytes: b'\xc2\xb4')
+    官方序号: 113, 用户序号: 181
+  Token: 'µ' (bytes: b'\xc2\xb5')
+    官方序号: 114, 用户序号: 182
+  Token: '¶' (bytes: b'\xc2\xb6')
+    官方序号: 115, 用户序号: 183
+  Token: '·' (bytes: b'\xc2\xb7')
+    官方序号: 116, 用户序号: 184
+  Token: '¸' (bytes: b'\xc2\xb8')
+    官方序号: 117, 用户序号: 185
+  Token: '¹' (bytes: b'\xc2\xb9')
+    官方序号: 118, 用户序号: 186
+  Token: 'º' (bytes: b'\xc2\xba')
+    官方序号: 119, 用户序号: 187
+  Token: '»' (bytes: b'\xc2\xbb')
+    官方序号: 120, 用户序号: 188
+  Token: '¼' (bytes: b'\xc2\xbc')
+    官方序号: 121, 用户序号: 189
+  Token: '½' (bytes: b'\xc2\xbd')
+    官方序号: 122, 用户序号: 190
+  Token: '¾' (bytes: b'\xc2\xbe')
+    官方序号: 123, 用户序号: 191
+  Token: '¿' (bytes: b'\xc2\xbf')
+    官方序号: 124, 用户序号: 192
+  Token: 'À' (bytes: b'\xc3\x80')
+    官方序号: 125, 用户序号: 193
+  Token: 'Á' (bytes: b'\xc3\x81')
+    官方序号: 126, 用户序号: 194
+  Token: 'Â' (bytes: b'\xc3\x82')
+    官方序号: 127, 用户序号: 195
+  Token: 'Ã' (bytes: b'\xc3\x83')
+    官方序号: 128, 用户序号: 196
+  Token: 'Ä' (bytes: b'\xc3\x84')
+    官方序号: 129, 用户序号: 197
+  Token: 'Å' (bytes: b'\xc3\x85')
+    官方序号: 130, 用户序号: 198
+  Token: 'Æ' (bytes: b'\xc3\x86')
+    官方序号: 131, 用户序号: 199
+  Token: 'Ç' (bytes: b'\xc3\x87')
+    官方序号: 132, 用户序号: 200
+  Token: 'È' (bytes: b'\xc3\x88')
+    官方序号: 133, 用户序号: 201
+  Token: 'É' (bytes: b'\xc3\x89')
+    官方序号: 134, 用户序号: 202
+  Token: 'Ê' (bytes: b'\xc3\x8a')
+    官方序号: 135, 用户序号: 203
+  Token: 'Ë' (bytes: b'\xc3\x8b')
+    官方序号: 136, 用户序号: 204
+  Token: 'Ì' (bytes: b'\xc3\x8c')
+    官方序号: 137, 用户序号: 205
+  Token: 'Í' (bytes: b'\xc3\x8d')
+    官方序号: 138, 用户序号: 206
+  Token: 'Î' (bytes: b'\xc3\x8e')
+    官方序号: 139, 用户序号: 207
+  Token: 'Ï' (bytes: b'\xc3\x8f')
+    官方序号: 140, 用户序号: 208
+  Token: 'Ð' (bytes: b'\xc3\x90')
+    官方序号: 141, 用户序号: 209
+  Token: 'Ñ' (bytes: b'\xc3\x91')
+    官方序号: 142, 用户序号: 210
+  Token: 'Ò' (bytes: b'\xc3\x92')
+    官方序号: 143, 用户序号: 211
+  Token: 'Ó' (bytes: b'\xc3\x93')
+    官方序号: 144, 用户序号: 212
+  Token: 'Ô' (bytes: b'\xc3\x94')
+    官方序号: 145, 用户序号: 213
+  Token: 'Õ' (bytes: b'\xc3\x95')
+    官方序号: 146, 用户序号: 214
+  Token: 'Ö' (bytes: b'\xc3\x96')
+    官方序号: 147, 用户序号: 215
+  Token: '×' (bytes: b'\xc3\x97')
+    官方序号: 148, 用户序号: 216
+  Token: 'Ø' (bytes: b'\xc3\x98')
+    官方序号: 149, 用户序号: 217
+  Token: 'Ù' (bytes: b'\xc3\x99')
+    官方序号: 150, 用户序号: 218
+  Token: 'Ú' (bytes: b'\xc3\x9a')
+    官方序号: 151, 用户序号: 219
+  Token: 'Û' (bytes: b'\xc3\x9b')
+    官方序号: 152, 用户序号: 220
+  Token: 'Ü' (bytes: b'\xc3\x9c')
+    官方序号: 153, 用户序号: 221
+  Token: 'Ý' (bytes: b'\xc3\x9d')
+    官方序号: 154, 用户序号: 222
+  Token: 'Þ' (bytes: b'\xc3\x9e')
+    官方序号: 155, 用户序号: 223
+  Token: 'ß' (bytes: b'\xc3\x9f')
+    官方序号: 156, 用户序号: 224
+  Token: 'à' (bytes: b'\xc3\xa0')
+    官方序号: 157, 用户序号: 225
+  Token: 'á' (bytes: b'\xc3\xa1')
+    官方序号: 158, 用户序号: 226
+  Token: 'â' (bytes: b'\xc3\xa2')
+    官方序号: 159, 用户序号: 227
+  Token: 'ã' (bytes: b'\xc3\xa3')
+    官方序号: 160, 用户序号: 228
+  Token: 'ä' (bytes: b'\xc3\xa4')
+    官方序号: 161, 用户序号: 229
+  Token: 'å' (bytes: b'\xc3\xa5')
+    官方序号: 162, 用户序号: 230
+  Token: 'æ' (bytes: b'\xc3\xa6')
+    官方序号: 163, 用户序号: 231
+  Token: 'ç' (bytes: b'\xc3\xa7')
+    官方序号: 164, 用户序号: 232
+  Token: 'è' (bytes: b'\xc3\xa8')
+    官方序号: 165, 用户序号: 233
+  Token: 'é' (bytes: b'\xc3\xa9')
+    官方序号: 166, 用户序号: 234
+  Token: 'ê' (bytes: b'\xc3\xaa')
+    官方序号: 167, 用户序号: 235
+  Token: 'ë' (bytes: b'\xc3\xab')
+    官方序号: 168, 用户序号: 236
+  Token: 'ì' (bytes: b'\xc3\xac')
+    官方序号: 169, 用户序号: 237
+  Token: 'í' (bytes: b'\xc3\xad')
+    官方序号: 170, 用户序号: 238
+  Token: 'î' (bytes: b'\xc3\xae')
+    官方序号: 171, 用户序号: 239
+  Token: 'ï' (bytes: b'\xc3\xaf')
+    官方序号: 172, 用户序号: 240
+  Token: 'ð' (bytes: b'\xc3\xb0')
+    官方序号: 173, 用户序号: 241
+  Token: 'ñ' (bytes: b'\xc3\xb1')
+    官方序号: 174, 用户序号: 242
+  Token: 'ò' (bytes: b'\xc3\xb2')
+    官方序号: 175, 用户序号: 243
+  Token: 'ó' (bytes: b'\xc3\xb3')
+    官方序号: 176, 用户序号: 244
+  Token: 'ô' (bytes: b'\xc3\xb4')
+    官方序号: 177, 用户序号: 245
+  Token: 'õ' (bytes: b'\xc3\xb5')
+    官方序号: 178, 用户序号: 246
+  Token: 'ö' (bytes: b'\xc3\xb6')
+    官方序号: 179, 用户序号: 247
+  Token: '÷' (bytes: b'\xc3\xb7')
+    官方序号: 180, 用户序号: 248
+  Token: 'ø' (bytes: b'\xc3\xb8')
+    官方序号: 181, 用户序号: 249
+  Token: 'ù' (bytes: b'\xc3\xb9')
+    官方序号: 182, 用户序号: 250
+  Token: 'ú' (bytes: b'\xc3\xba')
+    官方序号: 183, 用户序号: 251
+  Token: 'û' (bytes: b'\xc3\xbb')
+    官方序号: 184, 用户序号: 252
+  Token: 'ü' (bytes: b'\xc3\xbc')
+    官方序号: 185, 用户序号: 253
+  Token: 'ý' (bytes: b'\xc3\xbd')
+    官方序号: 186, 用户序号: 254
+  Token: 'þ' (bytes: b'\xc3\xbe')
+    官方序号: 187, 用户序号: 255
+  Token: 'ÿ' (bytes: b'\xc3\xbf')
+    官方序号: 188, 用户序号: 256
+  Token: 'Ā' (bytes: b'\xc4\x80')
+    官方序号: 189, 用户序号: 1
+  Token: 'ā' (bytes: b'\xc4\x81')
+    官方序号: 190, 用户序号: 2
+  Token: 'Ă' (bytes: b'\xc4\x82')
+    官方序号: 191, 用户序号: 3
+  Token: 'ă' (bytes: b'\xc4\x83')
+    官方序号: 192, 用户序号: 4
+  Token: 'Ą' (bytes: b'\xc4\x84')
+    官方序号: 193, 用户序号: 5
+  Token: 'ą' (bytes: b'\xc4\x85')
+    官方序号: 194, 用户序号: 6
+  Token: 'Ć' (bytes: b'\xc4\x86')
+    官方序号: 195, 用户序号: 7
+  Token: 'ć' (bytes: b'\xc4\x87')
+    官方序号: 196, 用户序号: 8
+  Token: 'Ĉ' (bytes: b'\xc4\x88')
+    官方序号: 197, 用户序号: 9
+  Token: 'ĉ' (bytes: b'\xc4\x89')
+    官方序号: 198, 用户序号: 10
+  Token: 'Ċ' (bytes: b'\xc4\x8a')
+    官方序号: 199, 用户序号: 11
+  Token: 'ċ' (bytes: b'\xc4\x8b')
+    官方序号: 200, 用户序号: 12
+  Token: 'Č' (bytes: b'\xc4\x8c')
+    官方序号: 201, 用户序号: 13
+  Token: 'č' (bytes: b'\xc4\x8d')
+    官方序号: 202, 用户序号: 14
+  Token: 'Ď' (bytes: b'\xc4\x8e')
+    官方序号: 203, 用户序号: 15
+  Token: 'ď' (bytes: b'\xc4\x8f')
+    官方序号: 204, 用户序号: 16
+  Token: 'Đ' (bytes: b'\xc4\x90')
+    官方序号: 205, 用户序号: 17
+  Token: 'đ' (bytes: b'\xc4\x91')
+    官方序号: 206, 用户序号: 18
+  Token: 'Ē' (bytes: b'\xc4\x92')
+    官方序号: 207, 用户序号: 19
+  Token: 'ē' (bytes: b'\xc4\x93')
+    官方序号: 208, 用户序号: 20
+  Token: 'Ĕ' (bytes: b'\xc4\x94')
+    官方序号: 209, 用户序号: 21
+  Token: 'ĕ' (bytes: b'\xc4\x95')
+    官方序号: 210, 用户序号: 22
+  Token: 'Ė' (bytes: b'\xc4\x96')
+    官方序号: 211, 用户序号: 23
+  Token: 'ė' (bytes: b'\xc4\x97')
+    官方序号: 212, 用户序号: 24
+  Token: 'Ę' (bytes: b'\xc4\x98')
+    官方序号: 213, 用户序号: 25
+  Token: 'ę' (bytes: b'\xc4\x99')
+    官方序号: 214, 用户序号: 26
+  Token: 'Ě' (bytes: b'\xc4\x9a')
+    官方序号: 215, 用户序号: 27
+  Token: 'ě' (bytes: b'\xc4\x9b')
+    官方序号: 216, 用户序号: 28
+  Token: 'Ĝ' (bytes: b'\xc4\x9c')
+    官方序号: 217, 用户序号: 29
+  Token: 'ĝ' (bytes: b'\xc4\x9d')
+    官方序号: 218, 用户序号: 30
+  Token: 'Ğ' (bytes: b'\xc4\x9e')
+    官方序号: 219, 用户序号: 31
+  Token: 'ğ' (bytes: b'\xc4\x9f')
+    官方序号: 220, 用户序号: 32
+  Token: 'Ġ' (bytes: b'\xc4\xa0')
+    官方序号: 221, 用户序号: 33
+  Token: 'ġ' (bytes: b'\xc4\xa1')
+    官方序号: 222, 用户序号: 128
+  Token: 'Ģ' (bytes: b'\xc4\xa2')
+    官方序号: 223, 用户序号: 129
+  Token: 'ģ' (bytes: b'\xc4\xa3')
+    官方序号: 224, 用户序号: 130
+  Token: 'Ĥ' (bytes: b'\xc4\xa4')
+    官方序号: 225, 用户序号: 131
+  Token: 'ĥ' (bytes: b'\xc4\xa5')
+    官方序号: 226, 用户序号: 132
+  Token: 'Ħ' (bytes: b'\xc4\xa6')
+    官方序号: 227, 用户序号: 133
+  Token: 'ħ' (bytes: b'\xc4\xa7')
+    官方序号: 228, 用户序号: 134
+  Token: 'Ĩ' (bytes: b'\xc4\xa8')
+    官方序号: 229, 用户序号: 135
+  Token: 'ĩ' (bytes: b'\xc4\xa9')
+    官方序号: 230, 用户序号: 136
+  Token: 'Ī' (bytes: b'\xc4\xaa')
+    官方序号: 231, 用户序号: 137
+  Token: 'ī' (bytes: b'\xc4\xab')
+    官方序号: 232, 用户序号: 138
+  Token: 'Ĭ' (bytes: b'\xc4\xac')
+    官方序号: 233, 用户序号: 139
+  Token: 'ĭ' (bytes: b'\xc4\xad')
+    官方序号: 234, 用户序号: 140
+  Token: 'Į' (bytes: b'\xc4\xae')
+    官方序号: 235, 用户序号: 141
+  Token: 'į' (bytes: b'\xc4\xaf')
+    官方序号: 236, 用户序号: 142
+  Token: 'İ' (bytes: b'\xc4\xb0')
+    官方序号: 237, 用户序号: 143
+  Token: 'ı' (bytes: b'\xc4\xb1')
+    官方序号: 238, 用户序号: 144
+  Token: 'Ĳ' (bytes: b'\xc4\xb2')
+    官方序号: 239, 用户序号: 145
+  Token: 'ĳ' (bytes: b'\xc4\xb3')
+    官方序号: 240, 用户序号: 146
+  Token: 'Ĵ' (bytes: b'\xc4\xb4')
+    官方序号: 241, 用户序号: 147
+  Token: 'ĵ' (bytes: b'\xc4\xb5')
+    官方序号: 242, 用户序号: 148
+  Token: 'Ķ' (bytes: b'\xc4\xb6')
+    官方序号: 243, 用户序号: 149
+  Token: 'ķ' (bytes: b'\xc4\xb7')
+    官方序号: 244, 用户序号: 150
+  Token: 'ĸ' (bytes: b'\xc4\xb8')
+    官方序号: 245, 用户序号: 151
+  Token: 'Ĺ' (bytes: b'\xc4\xb9')
+    官方序号: 246, 用户序号: 152
+  Token: 'ĺ' (bytes: b'\xc4\xba')
+    官方序号: 247, 用户序号: 153
+  Token: 'Ļ' (bytes: b'\xc4\xbb')
+    官方序号: 248, 用户序号: 154
+  Token: 'ļ' (bytes: b'\xc4\xbc')
+    官方序号: 249, 用户序号: 155
+  Token: 'Ľ' (bytes: b'\xc4\xbd')
+    官方序号: 250, 用户序号: 156
+  Token: 'ľ' (bytes: b'\xc4\xbe')
+    官方序号: 251, 用户序号: 157
+  Token: 'Ŀ' (bytes: b'\xc4\xbf')
+    官方序号: 252, 用户序号: 158
+  Token: 'ŀ' (bytes: b'\xc5\x80')
+    官方序号: 253, 用户序号: 159
+  Token: 'Ł' (bytes: b'\xc5\x81')
+    官方序号: 254, 用户序号: 160
+  Token: 'ł' (bytes: b'\xc5\x82')
+    官方序号: 255, 用户序号: 161
+  Token: 'Ń' (bytes: b'\xc5\x83')
+    官方序号: 256, 用户序号: 174
+  Token: 'Ġs' (bytes: b'\xc4\xa0s')
+    官方序号: 266, 用户序号: 265
+  Token: 'Ġ.' (bytes: b'\xc4\xa0.')
+    官方序号: 268, 用户序号: 266
+  Token: 'is' (bytes: b'is')
+    官方序号: 270, 用户序号: 267
+  Token: 'Ġw' (bytes: b'\xc4\xa0w')
+    官方序号: 272, 用户序号: 268
+  Token: 'Ġc' (bytes: b'\xc4\xa0c')
+    官方序号: 273, 用户序号: 269
+  Token: 'Ġb' (bytes: b'\xc4\xa0b')
+    官方序号: 275, 用户序号: 270
+  Token: 'Ġf' (bytes: b'\xc4\xa0f')
+    官方序号: 276, 用户序号: 271
+  Token: 'it' (bytes: b'it')
+    官方序号: 278, 用户序号: 272
+  Token: 'Ġof' (bytes: b'\xc4\xa0of')
+    官方序号: 281, 用户序号: 275
+  Token: 'Ġp' (bytes: b'\xc4\xa0p')
+    官方序号: 282, 用户序号: 276
+  Token: 'ing' (bytes: b'ing')
+    官方序号: 283, 用户序号: 277
+  Token: 'Ġin' (bytes: b'\xc4\xa0in')
+    官方序号: 284, 用户序号: 278
+  Token: 'Ġand' (bytes: b'\xc4\xa0and')
+    官方序号: 288, 用户序号: 281
+  Token: 'Ġd' (bytes: b'\xc4\xa0d')
+    官方序号: 289, 用户序号: 282
+  Token: 'Ġto' (bytes: b'\xc4\xa0to')
+    官方序号: 292, 用户序号: 284
+  Token: 'ic' (bytes: b'ic')
+    官方序号: 295, 用户序号: 288
+  Token: 'ion' (bytes: b'ion')
+    官方序号: 296, 用户序号: 289
+  Token: 'Ġy' (bytes: b'\xc4\xa0y')
+    官方序号: 299, 用户序号: 291
+  Token: 'Ġe' (bytes: b'\xc4\xa0e')
+    官方序号: 300, 用户序号: 285
+  Token: 'Ġn' (bytes: b'\xc4\xa0n')
+    官方序号: 304, 用户序号: 297
+  Token: 'Ġbe' (bytes: b'\xc4\xa0be')
+    官方序号: 307, 用户序号: 298
+  Token: 'Ġ&' (bytes: b'\xc4\xa0&')
+    官方序号: 308, 用户序号: 301
+  Token: 'Ġis' (bytes: b'\xc4\xa0is')
+    官方序号: 309, 用户序号: 302
+  Token: 'Ġyou' (bytes: b'\xc4\xa0you')
+    官方序号: 310, 用户序号: 304
+  Token: 'Ġre' (bytes: b'\xc4\xa0re')
+    官方序号: 312, 用户序号: 308
+  Token: 'Ġfor' (bytes: b'\xc4\xa0for')
+    官方序号: 314, 用户序号: 309
+  Token: 'ut' (bytes: b'ut')
+    官方序号: 315, 用户序号: 300
+  Token: 'Ġg' (bytes: b'\xc4\xa0g')
+    官方序号: 317, 用户序号: 310
+  Token: 'le' (bytes: b'le')
+    官方序号: 321, 用户序号: 283
+  Token: 'Ġon' (bytes: b'\xc4\xa0on')
+    官方序号: 324, 用户序号: 314
+  Token: 'ĠI' (bytes: b'\xc4\xa0I')
+    官方序号: 325, 用户序号: 315
+  Token: 've' (bytes: b've')
+    官方序号: 327, 用户序号: 279
+  Token: 'ĠA' (bytes: b'\xc4\xa0A')
+    官方序号: 328, 用户序号: 316
+  Token: 'qu' (bytes: b'qu')
+    官方序号: 332, 用户序号: 319
+  Token: 'Ġthat' (bytes: b'\xc4\xa0that')
+    官方序号: 333, 用户序号: 321
+  Token: 'ig' (bytes: b'ig')
+    官方序号: 337, 用户序号: 324
+  Token: 'ation' (bytes: b'ation')
+    官方序号: 339, 用户序号: 447
+  Token: 'ĠP' (bytes: b'\xc4\xa0P')
+    官方序号: 340, 用户序号: 328
+  Token: 'ĠS' (bytes: b'\xc4\xa0S')
+    官方序号: 343, 用户序号: 330
+  Token: 'Ġit' (bytes: b'\xc4\xa0it')
+    官方序号: 344, 用户序号: 331
+  Token: 'ĠC' (bytes: b'\xc4\xa0C')
+    官方序号: 348, 用户序号: 332
+  Token: 'Ġcom' (bytes: b'\xc4\xa0com')
+    官方序号: 350, 用户序号: 457
+  Token: 'Ġ@' (bytes: b'\xc4\xa0@')
+    官方序号: 351, 用户序号: 333
+  Token: '-@' (bytes: b'-@')
+    官方序号: 353, 用户序号: 336
+  Token: 'Ġare' (bytes: b'\xc4\xa0are')
+    官方序号: 354, 用户序号: 337
+  Token: 'Ġ@-@' (bytes: b'\xc4\xa0@-@')
+    官方序号: 355, 用户序号: 338
+  Token: 'id' (bytes: b'id')
+    官方序号: 357, 用户序号: 339
+  Token: 'Ġwith' (bytes: b'\xc4\xa0with')
+    官方序号: 358, 用户序号: 351
+  Token: 'Ġus' (bytes: b'\xc4\xa0us')
+    官方序号: 361, 用户序号: 343
+  Token: 'ers' (bytes: b'ers')
+    官方序号: 362, 用户序号: 349
+  Token: 'Ġas' (bytes: b'\xc4\xa0as')
+    官方序号: 363, 用户序号: 342
+  Token: 'if' (bytes: b'if')
+    官方序号: 366, 用户序号: 344
+  Token: 'ord' (bytes: b'ord')
+    官方序号: 367, 用户序号: 346
+  Token: 'Ġhe' (bytes: b'\xc4\xa0he')
+    官方序号: 369, 用户序号: 352
+  Token: 'ist' (bytes: b'ist')
+    官方序号: 370, 用户序号: 358
+  Token: 'quot' (bytes: b'quot')
+    官方序号: 371, 用户序号: 356
+  Token: 'ment' (bytes: b'ment')
+    官方序号: 372, 用户序号: 350
+  Token: 'ĠM' (bytes: b'\xc4\xa0M')
+    官方序号: 373, 用户序号: 357
+  Token: 'ĠG' (bytes: b'\xc4\xa0G')
+    官方序号: 376, 用户序号: 361
+  Token: 'Ġst' (bytes: b'\xc4\xa0st')
+    官方序号: 380, 用户序号: 364
+  Token: 'ld' (bytes: b'ld')
+    官方序号: 382, 用户序号: 318
+  Token: 'Ġthis' (bytes: b'\xc4\xa0this')
+    官方序号: 383, 用户序号: 366
+  Token: 'Ġ2' (bytes: b'\xc4\xa02')
+    官方序号: 384, 用户序号: 368
+  Token: 'Ġ;' (bytes: b'\xc4\xa0;')
+    官方序号: 386, 用户序号: 370
+  Token: 'ĠL' (bytes: b'\xc4\xa0L')
+    官方序号: 387, 用户序号: 371
+  Token: 'ly' (bytes: b'ly')
+    官方序号: 388, 用户序号: 317
+  Token: 'ain' (bytes: b'ain')
+    官方序号: 389, 用户序号: 434
+  Token: 'Ġde' (bytes: b'\xc4\xa0de')
+    官方序号: 391, 用户序号: 326
+  Token: 'Ġcon' (bytes: b'\xc4\xa0con')
+    官方序号: 392, 用户序号: 367
+  Token: 'Ġfrom' (bytes: b'\xc4\xa0from')
+    官方序号: 397, 用户序号: 376
+  Token: 'Ġan' (bytes: b'\xc4\xa0an')
+    官方序号: 398, 用户序号: 274
+  Token: 'Ġwe' (bytes: b'\xc4\xa0we')
+    官方序号: 399, 用户序号: 359
+  Token: 'Ġ(' (bytes: b'\xc4\xa0(')
+    官方序号: 400, 用户序号: 379
+  Token: '00' (bytes: b'00')
+    官方序号: 401, 用户序号: 380
+  Token: 'ĠE' (bytes: b'\xc4\xa0E')
+    官方序号: 403, 用户序号: 383
+  Token: 'Ġnot' (bytes: b'\xc4\xa0not')
+    官方序号: 406, 用户序号: 384
+  Token: 'Ġ)' (bytes: b'\xc4\xa0)')
+    官方序号: 407, 用户序号: 385
+  Token: 'Ġ1' (bytes: b'\xc4\xa01')
+    官方序号: 408, 用户序号: 387
+  Token: 'Ġyour' (bytes: b'\xc4\xa0your')
+    官方序号: 409, 用户序号: 396
+  Token: 'Ġcan' (bytes: b'\xc4\xa0can')
+    官方序号: 411, 用户序号: 388
+  Token: 'Ġby' (bytes: b'\xc4\xa0by')
+    官方序号: 412, 用户序号: 389
+  Token: 'ĠD' (bytes: b'\xc4\xa0D')
+    官方序号: 413, 用户序号: 391
+  Token: 'Ġne' (bytes: b'\xc4\xa0ne')
+    官方序号: 414, 用户序号: 382
+  Token: 'Ġup' (bytes: b'\xc4\xa0up')
+    官方序号: 420, 用户序号: 399
+  Token: 'ĠW' (bytes: b'\xc4\xa0W')
+    官方序号: 422, 用户序号: 400
+  Token: 'ble' (bytes: b'ble')
+    官方序号: 423, 用户序号: 393
+  Token: 'Ġthey' (bytes: b'\xc4\xa0they')
+    官方序号: 424, 用户序号: 402
+  Token: 'ĠB' (bytes: b'\xc4\xa0B')
+    官方序号: 425, 用户序号: 403
+  Token: 'Ġye' (bytes: b'\xc4\xa0ye')
+    官方序号: 427, 用户序号: 397
+  Token: 'Ġwhich' (bytes: b'\xc4\xa0which')
+    官方序号: 428, 用户序号: 406
+  Token: 'ĠO' (bytes: b'\xc4\xa0O')
+    官方序号: 429, 用户序号: 407
+  Token: 'ke' (bytes: b'ke')
+    官方序号: 430, 用户序号: 341
+  Token: 'ĠF' (bytes: b'\xc4\xa0F')
+    官方序号: 433, 用户序号: 410
+  Token: 'ĠH' (bytes: b'\xc4\xa0H')
+    官方序号: 434, 用户序号: 411
+  Token: 'Ġhave' (bytes: b'\xc4\xa0have')
+    官方序号: 435, 用户序号: 413
+  Token: 'Ġshall' (bytes: b'\xc4\xa0shall')
+    官方序号: 437, 用户序号: 414
+  Token: 'ity' (bytes: b'ity')
+    官方序号: 440, 用户序号: 420
+  Token: 'Ġsp' (bytes: b'\xc4\xa0sp')
+    官方序号: 441, 用户序号: 422
+  Token: 'ight' (bytes: b'ight')
+    官方序号: 443, 用户序号: 424
+  Token: 'Ġcomp' (bytes: b'\xc4\xa0comp')
+    官方序号: 445, 用户序号: 430
+  Token: 'Ġ&#' (bytes: b'\xc4\xa0&#')
+    官方序号: 448, 用户序号: 432
+  Token: 'ive' (bytes: b'ive')
+    官方序号: 449, 用户序号: 353
+  Token: 'Ġex' (bytes: b'\xc4\xa0ex')
+    官方序号: 452, 用户序号: 435
+  Token: 'ĠAnd' (bytes: b'\xc4\xa0And')
+    官方序号: 453, 用户序号: 436
+  Token: 'Ġ...' (bytes: b'\xc4\xa0...')
+    官方序号: 454, 用户序号: 438
+  Token: 'ĠT' (bytes: b'\xc4\xa0T')
+    官方序号: 457, 用户序号: 440
+  Token: 'ust' (bytes: b'ust')
+    官方序号: 461, 用户序号: 445
+  Token: 'Ġse' (bytes: b'\xc4\xa0se')
+    官方序号: 466, 用户序号: 345
+  Token: 'ree' (bytes: b'ree')
+    官方序号: 468, 用户序号: 419
+  Token: 'iz' (bytes: b'iz')
+    官方序号: 473, 用户序号: 450
+  Token: 'Ġac' (bytes: b'\xc4\xa0ac')
+    官方序号: 478, 用户序号: 417
+  Token: 'this' (bytes: b'this')
+    官方序号: 479, 用户序号: 453
+  Token: 'Ġman' (bytes: b'\xc4\xa0man')
+    官方序号: 484, 用户序号: 452
+  Token: 'Ġmy' (bytes: b'\xc4\xa0my')
+    官方序号: 486, 用户序号: 459
+  Token: 'Ġat' (bytes: b'\xc4\xa0at')
+    官方序号: 487, 用户序号: 458
+  Token: 'ies' (bytes: b'ies')
+    官方序号: 488, 用户序号: 442
+  Token: 'lo' (bytes: b'lo')
+    官方序号: 491, 用户序号: 307
+  Token: 'ind' (bytes: b'ind')
+    官方序号: 494, 用户序号: 465
+  Token: 'here' (bytes: b'here')
+    官方序号: 496, 用户序号: 433
+
+================================================================================
+【4. 完整序号对比表】(前 300 个序号)
+================================================================================
+    序号 | 官方 token                       | 用户 token                       | 状态
+--------------------------------------------------------------------------------
+     0 | '<|endoftext|>'                | '<|endoftext|>'                | ✓ 相同
+     1 | '!'                            | 'Ā'                            | ✗ 不同
+     2 | '"'                            | 'ā'                            | ✗ 不同
+     3 | '#'                            | 'Ă'                            | ✗ 不同
+     4 | '$'                            | 'ă'                            | ✗ 不同
+     5 | '%'                            | 'Ą'                            | ✗ 不同
+     6 | '&'                            | 'ą'                            | ✗ 不同
+     7 | "'"                            | 'Ć'                            | ✗ 不同
+     8 | '('                            | 'ć'                            | ✗ 不同
+     9 | ')'                            | 'Ĉ'                            | ✗ 不同
+    10 | '*'                            | 'ĉ'                            | ✗ 不同
+    11 | '+'                            | 'Ċ'                            | ✗ 不同
+    12 | ','                            | 'ċ'                            | ✗ 不同
+    13 | '-'                            | 'Č'                            | ✗ 不同
+    14 | '.'                            | 'č'                            | ✗ 不同
+    15 | '/'                            | 'Ď'                            | ✗ 不同
+    16 | '0'                            | 'ď'                            | ✗ 不同
+    17 | '1'                            | 'Đ'                            | ✗ 不同
+    18 | '2'                            | 'đ'                            | ✗ 不同
+    19 | '3'                            | 'Ē'                            | ✗ 不同
+    20 | '4'                            | 'ē'                            | ✗ 不同
+    21 | '5'                            | 'Ĕ'                            | ✗ 不同
+    22 | '6'                            | 'ĕ'                            | ✗ 不同
+    23 | '7'                            | 'Ė'                            | ✗ 不同
+    24 | '8'                            | 'ė'                            | ✗ 不同
+    25 | '9'                            | 'Ę'                            | ✗ 不同
+    26 | ':'                            | 'ę'                            | ✗ 不同
+    27 | ';'                            | 'Ě'                            | ✗ 不同
+    28 | '<'                            | 'ě'                            | ✗ 不同
+    29 | '='                            | 'Ĝ'                            | ✗ 不同
+    30 | '>'                            | 'ĝ'                            | ✗ 不同
+    31 | '?'                            | 'Ğ'                            | ✗ 不同
+    32 | '@'                            | 'ğ'                            | ✗ 不同
+    33 | 'A'                            | 'Ġ'                            | ✗ 不同
+    34 | 'B'                            | '!'                            | ✗ 不同
+    35 | 'C'                            | '"'                            | ✗ 不同
+    36 | 'D'                            | '#'                            | ✗ 不同
+    37 | 'E'                            | '$'                            | ✗ 不同
+    38 | 'F'                            | '%'                            | ✗ 不同
+    39 | 'G'                            | '&'                            | ✗ 不同
+    40 | 'H'                            | "'"                            | ✗ 不同
+    41 | 'I'                            | '('                            | ✗ 不同
+    42 | 'J'                            | ')'                            | ✗ 不同
+    43 | 'K'                            | '*'                            | ✗ 不同
+    44 | 'L'                            | '+'                            | ✗ 不同
+    45 | 'M'                            | ','                            | ✗ 不同
+    46 | 'N'                            | '-'                            | ✗ 不同
+    47 | 'O'                            | '.'                            | ✗ 不同
+    48 | 'P'                            | '/'                            | ✗ 不同
+    49 | 'Q'                            | '0'                            | ✗ 不同
+    50 | 'R'                            | '1'                            | ✗ 不同
+    51 | 'S'                            | '2'                            | ✗ 不同
+    52 | 'T'                            | '3'                            | ✗ 不同
+    53 | 'U'                            | '4'                            | ✗ 不同
+    54 | 'V'                            | '5'                            | ✗ 不同
+    55 | 'W'                            | '6'                            | ✗ 不同
+    56 | 'X'                            | '7'                            | ✗ 不同
+    57 | 'Y'                            | '8'                            | ✗ 不同
+    58 | 'Z'                            | '9'                            | ✗ 不同
+    59 | '['                            | ':'                            | ✗ 不同
+    60 | '\\'                           | ';'                            | ✗ 不同
+    61 | ']'                            | '<'                            | ✗ 不同
+    62 | '^'                            | '='                            | ✗ 不同
+    63 | '_'                            | '>'                            | ✗ 不同
+    64 | '`'                            | '?'                            | ✗ 不同
+    65 | 'a'                            | '@'                            | ✗ 不同
+    66 | 'b'                            | 'A'                            | ✗ 不同
+    67 | 'c'                            | 'B'                            | ✗ 不同
+    68 | 'd'                            | 'C'                            | ✗ 不同
+    69 | 'e'                            | 'D'                            | ✗ 不同
+    70 | 'f'                            | 'E'                            | ✗ 不同
+    71 | 'g'                            | 'F'                            | ✗ 不同
+    72 | 'h'                            | 'G'                            | ✗ 不同
+    73 | 'i'                            | 'H'                            | ✗ 不同
+    74 | 'j'                            | 'I'                            | ✗ 不同
+    75 | 'k'                            | 'J'                            | ✗ 不同
+    76 | 'l'                            | 'K'                            | ✗ 不同
+    77 | 'm'                            | 'L'                            | ✗ 不同
+    78 | 'n'                            | 'M'                            | ✗ 不同
+    79 | 'o'                            | 'N'                            | ✗ 不同
+    80 | 'p'                            | 'O'                            | ✗ 不同
+    81 | 'q'                            | 'P'                            | ✗ 不同
+    82 | 'r'                            | 'Q'                            | ✗ 不同
+    83 | 's'                            | 'R'                            | ✗ 不同
+    84 | 't'                            | 'S'                            | ✗ 不同
+    85 | 'u'                            | 'T'                            | ✗ 不同
+    86 | 'v'                            | 'U'                            | ✗ 不同
+    87 | 'w'                            | 'V'                            | ✗ 不同
+    88 | 'x'                            | 'W'                            | ✗ 不同
+    89 | 'y'                            | 'X'                            | ✗ 不同
+    90 | 'z'                            | 'Y'                            | ✗ 不同
+    91 | '{'                            | 'Z'                            | ✗ 不同
+    92 | '|'                            | '['                            | ✗ 不同
+    93 | '}'                            | '\\'                           | ✗ 不同
+    94 | '~'                            | ']'                            | ✗ 不同
+    95 | '¡'                            | '^'                            | ✗ 不同
+    96 | '¢'                            | '_'                            | ✗ 不同
+    97 | '£'                            | '`'                            | ✗ 不同
+    98 | '¤'                            | 'a'                            | ✗ 不同
+    99 | '¥'                            | 'b'                            | ✗ 不同
+   100 | '¦'                            | 'c'                            | ✗ 不同
+   101 | '§'                            | 'd'                            | ✗ 不同
+   102 | '¨'                            | 'e'                            | ✗ 不同
+   103 | '©'                            | 'f'                            | ✗ 不同
+   104 | 'ª'                            | 'g'                            | ✗ 不同
+   105 | '«'                            | 'h'                            | ✗ 不同
+   106 | '¬'                            | 'i'                            | ✗ 不同
+   107 | '®'                            | 'j'                            | ✗ 不同
+   108 | '¯'                            | 'k'                            | ✗ 不同
+   109 | '°'                            | 'l'                            | ✗ 不同
+   110 | '±'                            | 'm'                            | ✗ 不同
+   111 | '²'                            | 'n'                            | ✗ 不同
+   112 | '³'                            | 'o'                            | ✗ 不同
+   113 | '´'                            | 'p'                            | ✗ 不同
+   114 | 'µ'                            | 'q'                            | ✗ 不同
+   115 | '¶'                            | 'r'                            | ✗ 不同
+   116 | '·'                            | 's'                            | ✗ 不同
+   117 | '¸'                            | 't'                            | ✗ 不同
+   118 | '¹'                            | 'u'                            | ✗ 不同
+   119 | 'º'                            | 'v'                            | ✗ 不同
+   120 | '»'                            | 'w'                            | ✗ 不同
+   121 | '¼'                            | 'x'                            | ✗ 不同
+   122 | '½'                            | 'y'                            | ✗ 不同
+   123 | '¾'                            | 'z'                            | ✗ 不同
+   124 | '¿'                            | '{'                            | ✗ 不同
+   125 | 'À'                            | '|'                            | ✗ 不同
+   126 | 'Á'                            | '}'                            | ✗ 不同
+   127 | 'Â'                            | '~'                            | ✗ 不同
+   128 | 'Ã'                            | 'ġ'                            | ✗ 不同
+   129 | 'Ä'                            | 'Ģ'                            | ✗ 不同
+   130 | 'Å'                            | 'ģ'                            | ✗ 不同
+   131 | 'Æ'                            | 'Ĥ'                            | ✗ 不同
+   132 | 'Ç'                            | 'ĥ'                            | ✗ 不同
+   133 | 'È'                            | 'Ħ'                            | ✗ 不同
+   134 | 'É'                            | 'ħ'                            | ✗ 不同
+   135 | 'Ê'                            | 'Ĩ'                            | ✗ 不同
+   136 | 'Ë'                            | 'ĩ'                            | ✗ 不同
+   137 | 'Ì'                            | 'Ī'                            | ✗ 不同
+   138 | 'Í'                            | 'ī'                            | ✗ 不同
+   139 | 'Î'                            | 'Ĭ'                            | ✗ 不同
+   140 | 'Ï'                            | 'ĭ'                            | ✗ 不同
+   141 | 'Ð'                            | 'Į'                            | ✗ 不同
+   142 | 'Ñ'                            | 'į'                            | ✗ 不同
+   143 | 'Ò'                            | 'İ'                            | ✗ 不同
+   144 | 'Ó'                            | 'ı'                            | ✗ 不同
+   145 | 'Ô'                            | 'Ĳ'                            | ✗ 不同
+   146 | 'Õ'                            | 'ĳ'                            | ✗ 不同
+   147 | 'Ö'                            | 'Ĵ'                            | ✗ 不同
+   148 | '×'                            | 'ĵ'                            | ✗ 不同
+   149 | 'Ø'                            | 'Ķ'                            | ✗ 不同
+   150 | 'Ù'                            | 'ķ'                            | ✗ 不同
+   151 | 'Ú'                            | 'ĸ'                            | ✗ 不同
+   152 | 'Û'                            | 'Ĺ'                            | ✗ 不同
+   153 | 'Ü'                            | 'ĺ'                            | ✗ 不同
+   154 | 'Ý'                            | 'Ļ'                            | ✗ 不同
+   155 | 'Þ'                            | 'ļ'                            | ✗ 不同
+   156 | 'ß'                            | 'Ľ'                            | ✗ 不同
+   157 | 'à'                            | 'ľ'                            | ✗ 不同
+   158 | 'á'                            | 'Ŀ'                            | ✗ 不同
+   159 | 'â'                            | 'ŀ'                            | ✗ 不同
+   160 | 'ã'                            | 'Ł'                            | ✗ 不同
+   161 | 'ä'                            | 'ł'                            | ✗ 不同
+   162 | 'å'                            | '¡'                            | ✗ 不同
+   163 | 'æ'                            | '¢'                            | ✗ 不同
+   164 | 'ç'                            | '£'                            | ✗ 不同
+   165 | 'è'                            | '¤'                            | ✗ 不同
+   166 | 'é'                            | '¥'                            | ✗ 不同
+   167 | 'ê'                            | '¦'                            | ✗ 不同
+   168 | 'ë'                            | '§'                            | ✗ 不同
+   169 | 'ì'                            | '¨'                            | ✗ 不同
+   170 | 'í'                            | '©'                            | ✗ 不同
+   171 | 'î'                            | 'ª'                            | ✗ 不同
+   172 | 'ï'                            | '«'                            | ✗ 不同
+   173 | 'ð'                            | '¬'                            | ✗ 不同
+   174 | 'ñ'                            | 'Ń'                            | ✗ 不同
+   175 | 'ò'                            | '®'                            | ✗ 不同
+   176 | 'ó'                            | '¯'                            | ✗ 不同
+   177 | 'ô'                            | '°'                            | ✗ 不同
+   178 | 'õ'                            | '±'                            | ✗ 不同
+   179 | 'ö'                            | '²'                            | ✗ 不同
+   180 | '÷'                            | '³'                            | ✗ 不同
+   181 | 'ø'                            | '´'                            | ✗ 不同
+   182 | 'ù'                            | 'µ'                            | ✗ 不同
+   183 | 'ú'                            | '¶'                            | ✗ 不同
+   184 | 'û'                            | '·'                            | ✗ 不同
+   185 | 'ü'                            | '¸'                            | ✗ 不同
+   186 | 'ý'                            | '¹'                            | ✗ 不同
+   187 | 'þ'                            | 'º'                            | ✗ 不同
+   188 | 'ÿ'                            | '»'                            | ✗ 不同
+   189 | 'Ā'                            | '¼'                            | ✗ 不同
+   190 | 'ā'                            | '½'                            | ✗ 不同
+   191 | 'Ă'                            | '¾'                            | ✗ 不同
+   192 | 'ă'                            | '¿'                            | ✗ 不同
+   193 | 'Ą'                            | 'À'                            | ✗ 不同
+   194 | 'ą'                            | 'Á'                            | ✗ 不同
+   195 | 'Ć'                            | 'Â'                            | ✗ 不同
+   196 | 'ć'                            | 'Ã'                            | ✗ 不同
+   197 | 'Ĉ'                            | 'Ä'                            | ✗ 不同
+   198 | 'ĉ'                            | 'Å'                            | ✗ 不同
+   199 | 'Ċ'                            | 'Æ'                            | ✗ 不同
+   200 | 'ċ'                            | 'Ç'                            | ✗ 不同
+   201 | 'Č'                            | 'È'                            | ✗ 不同
+   202 | 'č'                            | 'É'                            | ✗ 不同
+   203 | 'Ď'                            | 'Ê'                            | ✗ 不同
+   204 | 'ď'                            | 'Ë'                            | ✗ 不同
+   205 | 'Đ'                            | 'Ì'                            | ✗ 不同
+   206 | 'đ'                            | 'Í'                            | ✗ 不同
+   207 | 'Ē'                            | 'Î'                            | ✗ 不同
+   208 | 'ē'                            | 'Ï'                            | ✗ 不同
+   209 | 'Ĕ'                            | 'Ð'                            | ✗ 不同
+   210 | 'ĕ'                            | 'Ñ'                            | ✗ 不同
+   211 | 'Ė'                            | 'Ò'                            | ✗ 不同
+   212 | 'ė'                            | 'Ó'                            | ✗ 不同
+   213 | 'Ę'                            | 'Ô'                            | ✗ 不同
+   214 | 'ę'                            | 'Õ'                            | ✗ 不同
+   215 | 'Ě'                            | 'Ö'                            | ✗ 不同
+   216 | 'ě'                            | '×'                            | ✗ 不同
+   217 | 'Ĝ'                            | 'Ø'                            | ✗ 不同
+   218 | 'ĝ'                            | 'Ù'                            | ✗ 不同
+   219 | 'Ğ'                            | 'Ú'                            | ✗ 不同
+   220 | 'ğ'                            | 'Û'                            | ✗ 不同
+   221 | 'Ġ'                            | 'Ü'                            | ✗ 不同
+   222 | 'ġ'                            | 'Ý'                            | ✗ 不同
+   223 | 'Ģ'                            | 'Þ'                            | ✗ 不同
+   224 | 'ģ'                            | 'ß'                            | ✗ 不同
+   225 | 'Ĥ'                            | 'à'                            | ✗ 不同
+   226 | 'ĥ'                            | 'á'                            | ✗ 不同
+   227 | 'Ħ'                            | 'â'                            | ✗ 不同
+   228 | 'ħ'                            | 'ã'                            | ✗ 不同
+   229 | 'Ĩ'                            | 'ä'                            | ✗ 不同
+   230 | 'ĩ'                            | 'å'                            | ✗ 不同
+   231 | 'Ī'                            | 'æ'                            | ✗ 不同
+   232 | 'ī'                            | 'ç'                            | ✗ 不同
+   233 | 'Ĭ'                            | 'è'                            | ✗ 不同
+   234 | 'ĭ'                            | 'é'                            | ✗ 不同
+   235 | 'Į'                            | 'ê'                            | ✗ 不同
+   236 | 'į'                            | 'ë'                            | ✗ 不同
+   237 | 'İ'                            | 'ì'                            | ✗ 不同
+   238 | 'ı'                            | 'í'                            | ✗ 不同
+   239 | 'Ĳ'                            | 'î'                            | ✗ 不同
+   240 | 'ĳ'                            | 'ï'                            | ✗ 不同
+   241 | 'Ĵ'                            | 'ð'                            | ✗ 不同
+   242 | 'ĵ'                            | 'ñ'                            | ✗ 不同
+   243 | 'Ķ'                            | 'ò'                            | ✗ 不同
+   244 | 'ķ'                            | 'ó'                            | ✗ 不同
+   245 | 'ĸ'                            | 'ô'                            | ✗ 不同
+   246 | 'Ĺ'                            | 'õ'                            | ✗ 不同
+   247 | 'ĺ'                            | 'ö'                            | ✗ 不同
+   248 | 'Ļ'                            | '÷'                            | ✗ 不同
+   249 | 'ļ'                            | 'ø'                            | ✗ 不同
+   250 | 'Ľ'                            | 'ù'                            | ✗ 不同
+   251 | 'ľ'                            | 'ú'                            | ✗ 不同
+   252 | 'Ŀ'                            | 'û'                            | ✗ 不同
+   253 | 'ŀ'                            | 'ü'                            | ✗ 不同
+   254 | 'Ł'                            | 'ý'                            | ✗ 不同
+   255 | 'ł'                            | 'þ'                            | ✗ 不同
+   256 | 'Ń'                            | 'ÿ'                            | ✗ 不同
+   257 | 'Ġt'                           | 'Ġt'                           | ✓ 相同
+   258 | 'Ġa'                           | 'Ġa'                           | ✓ 相同
+   259 | 'he'                           | 'he'                           | ✓ 相同
+   260 | 'in'                           | 'in'                           | ✓ 相同
+   261 | 'Ġthe'                         | 'Ġthe'                         | ✓ 相同
+   262 | 're'                           | 're'                           | ✓ 相同
+   263 | 'Ġo'                           | 'Ġo'                           | ✓ 相同
+   264 | 'Ġ,'                           | 'Ġ,'                           | ✓ 相同
+   265 | 'er'                           | 'Ġs'                           | ✗ 不同
+   266 | 'Ġs'                           | 'Ġ.'                           | ✗ 不同
+   267 | 'at'                           | 'is'                           | ✗ 不同
+   268 | 'Ġ.'                           | 'Ġw'                           | ✗ 不同
+   269 | 'nd'                           | 'Ġc'                           | ✗ 不同
+   270 | 'is'                           | 'Ġb'                           | ✗ 不同
+   271 | 'or'                           | 'Ġf'                           | ✗ 不同
+   272 | 'Ġw'                           | 'it'                           | ✗ 不同
+   273 | 'Ġc'                           | 'ha'                           | ✗ 不同
+   274 | 'on'                           | 'Ġan'                          | ✗ 不同
+   275 | 'Ġb'                           | 'Ġof'                          | ✗ 不同
+   276 | 'Ġf'                           | 'Ġp'                           | ✗ 不同
+   277 | 'ou'                           | 'ing'                          | ✗ 不同
+   278 | 'it'                           | 'Ġin'                          | ✗ 不同
+   279 | 'en'                           | 've'                           | ✗ 不同
+   280 | 'es'                           | 'me'                           | ✗ 不同
+   281 | 'Ġof'                          | 'Ġand'                         | ✗ 不同
+   282 | 'Ġp'                           | 'Ġd'                           | ✗ 不同
+   283 | 'ing'                          | 'le'                           | ✗ 不同
+   284 | 'Ġin'                          | 'Ġto'                          | ✗ 不同
+   285 | 'ed'                           | 'Ġe'                           | ✗ 不同
+   286 | 'al'                           | 'io'                           | ✗ 不同
+   287 | 'Ġm'                           | 'ro'                           | ✗ 不同
+   288 | 'Ġand'                         | 'ic'                           | ✗ 不同
+   289 | 'Ġd'                           | 'ion'                          | ✗ 不同
+   290 | 'an'                           | 'ho'                           | ✗ 不同
+   291 | 'ar'                           | 'Ġy'                           | ✗ 不同
+   292 | 'Ġto'                          | 'ma'                           | ✗ 不同
+   293 | 'om'                           | 'Ġco'                          | ✗ 不同
+   294 | 'Ġth'                          | 'la'                           | ✗ 不同
+   295 | 'ic'                           | 'ra'                           | ✗ 不同
+   296 | 'ion'                          | 'us'                           | ✗ 不同
+   297 | 'Ġh'                           | 'Ġn'                           | ✗ 不同
+   298 | 'Ġl'                           | 'Ġbe'                          | ✗ 不同
+   299 | 'Ġy'                           | 'rs'                           | ✗ 不同
+
+================================================================================
+报告生成完毕
+================================================================================

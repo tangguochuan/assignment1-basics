@@ -37,8 +37,8 @@ Download the TinyStories data and a subsample of OpenWebText
 mkdir -p data
 cd data
 
-wget https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStoriesV2-GPT4-train.txt
-wget https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStoriesV2-GPT4-valid.txt
+wget https://modelscope.cn/datasets/AI-ModelScope/TinyStories/resolve/master/TinyStoriesV2-GPT4-train.txt
+wget https://modelscope.cn/datasets/AI-ModelScope/TinyStories/resolve/master/TinyStoriesV2-GPT4-valid.txt
 
 wget https://huggingface.co/datasets/stanford-cs336/owt-sample/resolve/main/owt_train.txt.gz
 gunzip owt_train.txt.gz
