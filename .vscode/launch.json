@@ -2,40 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Debug pytest (current file)",
+            "name": "Python: Debug tokenizer.py (uv run)",
             "type": "debugpy",
             "request": "launch",
-            "module": "pytest",
-            "args": [
-                "${file}",
-                "-v"
-            ],
+            "program": "${workspaceFolder}/tokenizer.py",
             "console": "integratedTerminal",
-            "justMyCode": false
-        },
-        {
-            "name": "Python: Debug test_train_bpe.py",
-            "type": "debugpy",
-            "request": "launch",
-            "module": "pytest",
-            "args": [
-                "tests/test_train_bpe.py",
-                "-v"
-            ],
-            "console": "integratedTerminal",
-            "justMyCode": false
-        },
-        {
-            "name": "Python: Debug specific test",
-            "type": "debugpy",
-            "request": "launch",
-            "module": "pytest",
-            "args": [
-                "tests/test_train_bpe.py::test_train_bpe",
-                "-v"
-            ],
-            "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
+            "python": "${workspaceFolder}/.venv/bin/python"
         }
     ]
 }

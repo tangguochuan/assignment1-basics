@@ -11,7 +11,8 @@ from torch import Tensor
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from tokenizer import train_bpe
+from tokenizer import train_bpe,Tokenizer
+from block import Linear, Embedding, RMSNorm, SiLU, SwiGLU, RotaryPositionalEmbedding
 def run_linear(
     d_in: int,
     d_out: int,
@@ -30,8 +31,10 @@ def run_linear(
     Returns:
         Float[Tensor, "... d_out"]: The transformed output of your linear module.
     """
-
-    raise NotImplementedError
+    weights_dict = {"weight": weights}
+    linear_model = Linear(d_in, d_out)
+    linear_model.load_state_dict(weights_dict)
+    return linear_model(in_features)
 
 
 def run_embedding(
@@ -52,8 +55,10 @@ def run_embedding(
     Returns:
         Float[Tensor, "... d_model"]: Batch of embeddings returned by your Embedding layer.
     """
-
-    raise NotImplementedError
+    weights_dict = {"embedding": weights}
+    embedding_model = Embedding(vocab_size, d_model)
+    embedding_model.load_state_dict(weights_dict)
+    return embedding_model(token_ids)
 
 
 def run_swiglu(
@@ -85,7 +90,11 @@ def run_swiglu(
     # swiglu.w1.weight.data = w1_weight
     # swiglu.w2.weight.data = w2_weight
     # swiglu.w3.weight.data = w3_weight
-    raise NotImplementedError
+
+    weights = {"linear1.weight":w1_weight, "linear2.weight":w2_weight, "linear3.weight":w3_weight}
+    swiglu = SwiGLU(d_model,d_ff)
+    swiglu.load_state_dict(weights)
+    return swiglu(in_features)
 
 
 def run_scaled_dot_product_attention(
@@ -202,8 +211,8 @@ def run_rope(
     Returns:
         Float[Tensor, " ... sequence_length d_k"]: Tensor with RoPEd input.
     """
-    raise NotImplementedError
-
+    rope = RotaryPositionalEmbedding(theta, d_k, max_seq_len)
+    return rope(in_query_or_key, token_positions)
 
 def run_transformer_block(
     d_model: int,
@@ -380,7 +389,10 @@ def run_rmsnorm(
         Float[Tensor,"... d_model"]: Tensor of with the same shape as `in_features` with the output of running
         RMSNorm of the `in_features`.
     """
-    raise NotImplementedError
+    weights = {"g": weights}
+    rmsnorm = RMSNorm(d_model, eps)
+    rmsnorm.load_state_dict(weights)
+    return rmsnorm(in_features)
 
 
 def run_silu(in_features: Float[Tensor, " ..."]) -> Float[Tensor, " ..."]:
@@ -394,7 +406,8 @@ def run_silu(in_features: Float[Tensor, " ..."]) -> Float[Tensor, " ..."]:
         Float[Tensor,"..."]: of with the same shape as `in_features` with the output of applying
         SiLU to each element.
     """
-    raise NotImplementedError
+    silu = SiLU()
+    return silu(in_features)
 
 
 def run_get_batch(
@@ -561,7 +574,7 @@ def get_tokenizer(
     Returns:
         A BPE tokenizer that uses the provided vocab, merges, and special tokens.
     """
-    raise NotImplementedError
+    return Tokenizer(vocab, merges, special_tokens)
 
 
 def run_train_bpe(
