@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from tokenizer import train_bpe,Tokenizer
-from block import Linear, Embedding, RMSNorm, SiLU, SwiGLU, RotaryPositionalEmbedding
+from block import Linear, Embedding, RMSNorm, SiLU, SwiGLU, RotaryPositionalEmbedding,SoftMax,ScaledDotProductAttention, MultiHeadSelfAttention, TransformerBlock
 def run_linear(
     d_in: int,
     d_out: int,
@@ -115,7 +115,8 @@ def run_scaled_dot_product_attention(
     Returns:
         Float[Tensor, " ... queries d_v"]: Output of SDPA
     """
-    raise NotImplementedError
+    sdpa = ScaledDotProductAttention()
+    return sdpa(Q,K,V,mask)
 
 
 def run_multihead_self_attention(
@@ -149,7 +150,22 @@ def run_multihead_self_attention(
         Float[Tensor, " ... sequence_length d_out"]: Tensor with the output of running your optimized, batched multi-headed attention
         implementation with the given QKV projection weights and input features.
     """
-    raise NotImplementedError
+    d_in = in_features.shape[-1]
+    d_q = q_proj_weight.shape[0]
+    d_k = k_proj_weight.shape[0]
+    d_v = v_proj_weight.shape[0]
+    weights = {"linear_q.weight": q_proj_weight, "linear_k.weight": k_proj_weight, "linear_v.weight": v_proj_weight, "linear_o.weight": o_proj_weight}
+    multi_head_self_atten = MultiHeadSelfAttention(d_model=d_model, num_heads=num_heads,d_in= d_in,d_q=d_q, d_k = d_k, d_v = d_v)
+    multi_head_self_atten.load_state_dict(weights)
+    return multi_head_self_atten(in_features)
+    
+    # print(f"d_model: {d_model}")
+    # print(f"num_heads: {num_heads}")
+    # print(f"q shape: {q_proj_weight.shape}")
+    # print(f"k shape: {k_proj_weight.shape}")
+    # print(f"v shape: {v_proj_weight.shape}")
+    # print(f"o shape: {o_proj_weight.shape}")
+    # raise NotImplementedError
 
 
 def run_multihead_self_attention_with_rope(
@@ -189,7 +205,29 @@ def run_multihead_self_attention_with_rope(
         Float[Tensor, " ... sequence_length d_out"]: Tensor with the output of running your optimized, batched multi-headed attention
         implementation with the given QKV projection weights and input features.
     """
-    raise NotImplementedError
+    d_in = in_features.shape[-1]
+    d_q = q_proj_weight.shape[0]
+    d_k = k_proj_weight.shape[0]
+    d_v = v_proj_weight.shape[0]
+    weights = {
+        "linear_q.weight": q_proj_weight, 
+        "linear_k.weight": k_proj_weight, 
+        "linear_v.weight": v_proj_weight, 
+        "linear_o.weight": o_proj_weight
+    }
+    multi_head_self_atten = MultiHeadSelfAttention(
+        d_model=d_model, 
+        num_heads=num_heads, 
+        d_in=d_in,
+        d_q=d_q, 
+        d_k=d_k, 
+        d_v=d_v,
+        use_rope=True,
+        max_seq_len=max_seq_len,
+        theta=theta
+    )
+    multi_head_self_atten.load_state_dict(weights)
+    return multi_head_self_atten(in_features, token_positions)
 
 
 def run_rope(
@@ -284,7 +322,24 @@ def run_transformer_block(
         Float[Tensor, "batch sequence_length d_model"] Tensor with the output of
         running the Transformer block on the input features while using RoPE.
     """
-    raise NotImplementedError
+    transformer_block = TransformerBlock(d_model=d_model, num_heads=num_heads,d_ff=d_ff,d_in=d_model,d_q=d_model,d_k=d_model, d_v=d_model, max_seq_len=max_seq_len,theta=theta)
+    state_dict = {
+          "mha_layer.mhsa.linear_q.weight": weights["attn.q_proj.weight"],
+          "mha_layer.mhsa.linear_k.weight": weights["attn.k_proj.weight"],
+          "mha_layer.mhsa.linear_v.weight": weights["attn.v_proj.weight"],
+          "mha_layer.mhsa.linear_o.weight": weights["attn.output_proj.weight"],
+
+          "mha_layer.rms.g": weights["ln1.weight"],
+
+          "ffn_layer.swiglu.linear1.weight": weights["ffn.w1.weight"],
+          "ffn_layer.swiglu.linear2.weight": weights["ffn.w2.weight"],
+          "ffn_layer.swiglu.linear3.weight": weights["ffn.w3.weight"],
+
+          "ffn_layer.rms.g": weights["ln2.weight"],
+      }
+
+    transformer_block.load_state_dict(state_dict)
+    return transformer_block(in_features)
 
 
 def run_transformer_lm(
@@ -446,7 +501,8 @@ def run_softmax(in_features: Float[Tensor, " ..."], dim: int) -> Float[Tensor, "
         Float[Tensor, "..."]: Tensor of with the same shape as `in_features` with the output of
         softmax normalizing the specified `dim`.
     """
-    raise NotImplementedError
+    sm = SoftMax()
+    return sm(in_features, dim)
 
 
 def run_cross_entropy(

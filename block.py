@@ -94,3 +94,86 @@ class RotaryPositionalEmbedding(nn.Module):
     two=2                                  
 )
         return x * cos + x_rotated * sin
+
+class SoftMax(nn.Module):
+    def __init__(self):
+        super().__init__()
+    def forward(self,x:torch.Tensor, dim:int = -1) -> torch.Tensor:
+        x_max = x.max(dim=dim, keepdim=True).values
+        x_stable = x - x_max
+        x_exp = torch.exp(x_stable)
+        x_sum = x_exp.sum(dim=dim, keepdim=True)
+        return x_exp / x_sum
+    
+class ScaledDotProductAttention(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.sm = SoftMax()
+    def forward(self,Q:torch.Tensor, K:torch.Tensor, V:torch.Tensor, mask:torch.Tensor = None) -> torch.Tensor:
+        at = einsum(Q, K, "... q_len d_model, ... k_len d_model -> ... q_len k_len")*torch.rsqrt(torch.tensor(Q.shape[-1]))
+        if mask is not None:
+            at = at.masked_fill(~mask, float('-inf'))
+        scores = self.sm(at,-1)
+        return einsum(scores, V, "... q_len k_len, ... k_len d_model -> ... q_len d_model")
+
+class MultiHeadSelfAttention(nn.Module):
+    def __init__(self, d_model: int, num_heads: int, d_in:int, d_q:int, d_k:int, d_v: int, 
+                 use_rope: bool = False, max_seq_len: int = None, theta: float = None):
+        super().__init__()
+        self.d_model = d_model
+        self.num_heads = num_heads
+        self.d_k = d_k // num_heads  # per-head dimension
+        self.linear_q = Linear(d_in, d_q )
+        self.linear_k = Linear(d_in, d_k )
+        self.linear_v = Linear(d_in, d_v )
+        self.linear_o = Linear(d_v , d_model)
+        self.ScaledDotProductAttention = ScaledDotProductAttention()
+        self.use_rope = use_rope
+        if use_rope:
+            self.rope = RotaryPositionalEmbedding(theta, self.d_k, max_seq_len)
+    def forward(self, x: torch.Tensor, token_positions: torch.Tensor = None) -> torch.Tensor:
+        # x: [... seq_len, d_in]
+        q = self.linear_q(x) 
+        k = self.linear_k(x) 
+        v = self.linear_v(x) 
+        q = rearrange(q, '... seq_len (h d) -> ... h seq_len d', h = self.num_heads)
+        k = rearrange(k, '... seq_len (h d) -> ... h seq_len d', h = self.num_heads)
+        v = rearrange(v, '... seq_len (h d) -> ... h seq_len d', h = self.num_heads)
+            
+        if self.use_rope:
+            if token_positions is None:
+                seq_len = q.shape[-2]
+                token_positions = torch.arange(seq_len)
+            q = self.rope(q, token_positions)
+            k = self.rope(k, token_positions)
+        q_len = q.shape[-2]
+        k_len = k.shape[-2]
+        mask = torch.tril(torch.ones(q_len, k_len), diagonal=0).bool()
+        atten_out = self.ScaledDotProductAttention(q, k, v, mask = mask)
+        return self.linear_o(rearrange(atten_out, '... h s d -> ... s (h d)'))
+
+# 输入x, 输出: x + MHA(RMS(x))
+class MHALayer(nn.Module):
+    def __init__(self, d_model:int, num_heads: int, d_in: int, d_q: int, d_k: int, d_v: int, max_seq_len: int,theta:float):
+        super().__init__()
+        self.rms = RMSNorm(d_model=d_model)
+        self.mhsa = MultiHeadSelfAttention(d_model=d_model, num_heads=num_heads, d_in = d_in, d_q = d_q, d_k = d_k, d_v = d_v,use_rope=True,max_seq_len=max_seq_len,theta=theta)
+    def forward(self, x:torch.Tensor) -> torch.Tensor:
+        return x + self.mhsa(self.rms(x))
+
+class FFNLayer(nn.Module):
+    def __init__(self,d_model:int, d_ff:int):
+        super().__init__()
+        self.swiglu = SwiGLU(d_model = d_model, d_ff = d_ff)
+        self.rms = RMSNorm(d_model=d_model)
+    def forward(self, x:torch.Tensor) -> torch.Tensor:
+        return x + self.swiglu(self.rms(x))
+
+class TransformerBlock(nn.Module):
+    def __init__(self, d_model: int, num_heads: int, d_ff: int, d_in: int, d_q: int, d_k: int, d_v: int, max_seq_len: int,theta:float):
+        super().__init__()
+        self.mha_layer = MHALayer(d_model=d_model, num_heads=num_heads, d_in=d_in, d_q = d_q, d_k = d_k, d_v = d_v, max_seq_len=max_seq_len, theta=theta)
+        self.ffn_layer = FFNLayer(d_model=d_model,d_ff=d_ff)
+    
+    def forward(self,x: torch.Tensor) -> torch.Tensor:
+        return self.ffn_layer(self.mha_layer(x))
