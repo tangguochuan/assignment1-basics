@@ -12,7 +12,8 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from tokenizer import train_bpe,Tokenizer
-from block import Linear, Embedding, RMSNorm, SiLU, SwiGLU, RotaryPositionalEmbedding,SoftMax,ScaledDotProductAttention, MultiHeadSelfAttention, TransformerBlock
+from block import *
+from transformer import Transformer
 def run_linear(
     d_in: int,
     d_out: int,
@@ -421,7 +422,37 @@ def run_transformer_lm(
         Float[Tensor, "batch_size sequence_length vocab_size"]: Tensor with the predicted unnormalized
         next-word distribution for each token.
     """
-    raise NotImplementedError
+    transformer = Transformer(
+          vocab_size=vocab_size,
+          d_model=d_model,
+          num_layers=num_layers,
+          num_heads=num_heads,
+          d_ff=d_ff,
+          context_length=context_length,
+          rope_theta=rope_theta
+      )
+    state_dict = {}
+    state_dict["embedding.embedding"] = weights["token_embeddings.weight"]
+    for i in range(num_layers):
+        layer_prefix = f"atten_layers.{i}."
+        weight_prefix = f"layers.{i}."
+
+        state_dict[layer_prefix + "mha_layer.mhsa.linear_q.weight"] = weights[weight_prefix + "attn.q_proj.weight"]
+        state_dict[layer_prefix + "mha_layer.mhsa.linear_k.weight"] = weights[weight_prefix + "attn.k_proj.weight"]
+        state_dict[layer_prefix + "mha_layer.mhsa.linear_v.weight"] = weights[weight_prefix + "attn.v_proj.weight"]
+        state_dict[layer_prefix + "mha_layer.mhsa.linear_o.weight"] = weights[weight_prefix + "attn.output_proj.weight"]
+
+        state_dict[layer_prefix + "mha_layer.rms.g"] = weights[weight_prefix + "ln1.weight"]
+
+        state_dict[layer_prefix + "ffn_layer.swiglu.linear1.weight"] = weights[weight_prefix + "ffn.w1.weight"]
+        state_dict[layer_prefix + "ffn_layer.swiglu.linear2.weight"] = weights[weight_prefix + "ffn.w2.weight"]
+        state_dict[layer_prefix + "ffn_layer.swiglu.linear3.weight"] = weights[weight_prefix + "ffn.w3.weight"]
+
+        state_dict[layer_prefix + "ffn_layer.rms.g"] = weights[weight_prefix + "ln2.weight"]
+    state_dict["rms.g"] = weights["ln_final.weight"]
+    state_dict["output_linear.weight"] = weights["lm_head.weight"]
+    transformer.load_state_dict(state_dict)
+    return transformer(in_indices)
 
 
 def run_rmsnorm(
