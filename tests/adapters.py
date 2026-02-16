@@ -14,6 +14,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from tokenizer import train_bpe,Tokenizer
 from block import *
 from transformer import Transformer
+from loss import CrossEntropyLoss
+from optimizer import AdamW
 def run_linear(
     d_in: int,
     d_out: int,
@@ -551,7 +553,7 @@ def run_cross_entropy(
     Returns:
         Float[Tensor, ""]: The average cross-entropy loss across examples.
     """
-    raise NotImplementedError
+    return CrossEntropyLoss(inputs, targets)
 
 
 def run_gradient_clipping(parameters: Iterable[torch.nn.Parameter], max_l2_norm: float) -> None:
@@ -570,7 +572,7 @@ def get_adamw_cls() -> Any:
     """
     Returns a torch.optim.Optimizer that implements AdamW.
     """
-    raise NotImplementedError
+    return AdamW
 
 
 def run_get_lr_cosine_schedule(
